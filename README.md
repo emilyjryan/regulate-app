@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+# Welcome to the *Regulate* App!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech stack used:
+* Typescript
+* React
+* Express.js
+* Node.js
+* Mongo
 
-## Available Scripts
+I haven't learned Typescript yet but I plan to spend some time learning the very basics in the first day or two of the project time and then implementing this framework for the app development. I specifically chose Typescript because it's a very popular technology used in the industry and I want to add it as a new tool in my software engineering toolbelt.
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Having and maintaining a consistent routine and daily structure is vital to making a child with special needs such as autism feel safe, supported, and regulated. This is an app designed for these children to help them practice good habits that promote independence. Habits include managing a schedule and completing important daily tasks, developing healthy coping strategies for times of frustration or overstimulation, and identifying specific emotions in order to express themselves and their needs better.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3 main elements:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Daily schedule and to-do list
+    - Tasks for either morning or evening
 
-### `npm test`
+2) Calming environment creator
+    - Choose between a set list of background and sound options
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3) Emotion identifier
+    - Given a visual list of emotions that they can pick one to describe their current emotion
 
-### `npm run build`
+## Wireframes of the app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Getting Started](./pics/wireframes.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## User Flow and User Stories
+* As a user, I want to create my own account with a login and password
+* As a user, I want to create daily tasks under my overall "schedule" and check these tasks off as I go throughout the day
+* As a user, I want to create a calming environment that I can access at times of stress
+* As a user, I want to be able to quickly identify emotions that I don't have words for, using pictures
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Daily Sprints
 
-### `npm run eject`
+Friday: Learning Typescript, finishing readme and RESTful routing charts and ERDs
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Saturday: Getting basic functionality, create main structure of app
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Sunday: Set up backend, connect backend with frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Monday: Work on new task creation functionality
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Tuesday: Hopefully reach MVP, do basic styling
 
-## Learn More
+Wednesday: Stretch goals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Thursday: Stretch goals, final edits, and styling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## RESTful Routing
+
+![Routing Chart](./pics/routing-chart.png)
+
+## ERDs
+
+![ERDs](./pics/ERDs.png)
+
+## MVP
+* Single user app
+* User can add a new task for either morning or evening (dropdown option)
+* User can see a list of their 'to-do' tasks with the ability to check off a task as completed
+* User can delete a task
+* Emotion finder page renders a short list of emotion pictures and user can click one picture which will be shown larger in a card next to the list
+
+## Stretch goals
+* Add date, day of week, and current time to home page
+* Add day of the week capability to tasks and only render 
+* User auth: users can create account with username and password and log in/out
+* Calming environment functionality
+* Ability to create a new environment element
+* Animations instead of static images for background choices for environments
+* Ability of user to input a url for video to render in calming environment
+* Fun, colorful, calming styling
+* Chat feature so users can keep in touch with each other through the app
+* Links to other resources for families with kids with special needs
