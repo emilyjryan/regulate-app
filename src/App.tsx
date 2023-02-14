@@ -1,9 +1,10 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { TaskForm } from './components/TaskForm';
+import { NewTask } from './components/pages/NewTask';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Navbar/>
       </header>
       <h1>Regulate App</h1>
-      <TaskForm/>
+      <NewTask/>
       <footer>
         <Footer/>
       </footer>
