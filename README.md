@@ -76,3 +76,8 @@ Thursday: Stretch goals, final edits, and styling
 * Fun, colorful, calming styling
 * Chat feature so users can keep in touch with each other through the app
 * Links to other resources for families with kids with special needs
+
+## Journal:
+
+### Setup:
+* I started by running `npx create-react-app regulate-app --template typescript` to get my basic app installed. 

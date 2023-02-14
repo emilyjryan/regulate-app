@@ -1,14 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ToDoForm from './components/ToDoForm';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
-type Truck = {
-  wheels: number,
-  color: string
-}
+import { TaskForm } from './components/TaskForm';
 
 function App() {
   return (
@@ -16,8 +11,8 @@ function App() {
       <header>
         <Navbar/>
       </header>
-      <h1>How to create a React app with Typescript</h1>
-      <ToDoForm/>
+      <h1>Regulate App</h1>
+      <TaskForm/>
       <footer>
         <Footer/>
       </footer>
