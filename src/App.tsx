@@ -9,6 +9,7 @@ import NewTask from './components/pages/NewTask';
 function App() {
   return (
     <div className="App">
+      <Router>
       <header>
         <Navbar/>
       </header>
@@ -17,6 +18,7 @@ function App() {
       <footer>
         <Footer/>
       </footer>
+      </Router>
     </div>
   );
 }
