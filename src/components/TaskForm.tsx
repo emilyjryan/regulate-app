@@ -38,8 +38,8 @@ export default function TaskForm (props: {
             id="task-time"
             onChange={(e) => {
                 setForm({...form, time: e.target.value})
-            }}
-            >
+            }}>
+                <option value="">Select One</option>
                 <option value="Morning">Morning</option>
                 <option value="Evening">Evening</option>
             </select>
