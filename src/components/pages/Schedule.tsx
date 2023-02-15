@@ -2,15 +2,19 @@
 
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import Navigate, { useNavigate } from "react-router-dom";
 
 export default function Schedule () {
+
+    const navigate = useNavigate()
 
     const [tasks, setTasks] = useState<
     Array<{
         _id: string,
         title: string,
         time: string,
-        details: string
+        details: string,
+        completed: Boolean
     }>
     >([])
    
@@ -27,12 +31,34 @@ export default function Schedule () {
         getAllTasks()
     }, [])
 
+    async function handleDeleteTask(taskId: string) {
+        await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks/${taskId}`, {
+            method: "DELETE",
+        });
+        setTasks(tasks.filter((task) => task._id !== taskId))
+    }
+
+    async function handleSubmitTask(taskId: string) {
+        await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks/complete/${taskId}`, {
+            method: "PUT",
+        })
+        navigate('/tasks')
+    }
+
+    async function handleUndoComplete(taskId: string) {
+        await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks/undocomplete/${taskId}`, {
+            method: "PUT",
+        })
+        navigate('/tasks')
+    }
+
+
     const morningTasks = tasks.filter((task) => {
         return task.time === "Morning"
     }).map((task => {
         return (
             <>
-            <div key={task._id} className="card">
+            <div key={task._id} className="card has-background-warning">
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -41,6 +67,20 @@ export default function Schedule () {
                     </div>
                     <div className="content">
                         <p>{task.details}</p>
+                    </div>
+                    <div>
+                        {task.completed? 
+                            <div className="columns">
+                            <button className="button is-rounded is-success column is-one-fourth" title="Disabled button" disabled>✅ Task Completed</button>
+                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded is-info column is-one-fourth">Undo Complete </button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-fourth">❌ Delete Task</button>
+                            </div>
+                            :
+                            <div className="columns">
+                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded is-success column is-two-thirds">Complete Task!</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-third">❌ Delete Task</button>
+                            </div>
+                                }
                     </div>
                 </div>
             </div>
@@ -53,7 +93,7 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <div key={task._id} className="card">
+            <div key={task._id} className="card has-background-link">
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -63,24 +103,37 @@ export default function Schedule () {
                     <div className="content">
                         <p>{task.details}</p>
                     </div>
+                    <div>
+                        {task.completed? 
+                            <div className="columns">
+                            <button className="button is-rounded is-success column is-one-fourth" title="Disabled button" disabled>✅ Task Completed</button>
+                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded is-info column is-one-fourth">Undo Complete </button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-fourth">❌ Delete Task</button>
+                            </div>
+                            :
+                            <div className="columns">
+                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded is-success column is-two-thirds">Complete Task!</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-third">❌ Delete Task</button>
+                            </div>
+                                }
+                    </div>
                 </div>
             </div>
             </>
         )
     }))
 
-    const miscTasks = tasks.filter((task) => {
-        return task.time === ""
-    })
-    console.log(miscTasks)
+    // const miscTasks = tasks.filter((task) => {
+    //     return task.time === ""
+    // })
     
 
     return (
         <>
-        <h1>Schedule Route</h1>
-        <h2>Here are all your MORNING tasks:</h2>
+        <h1>My Schedule</h1>
+        <h2>MORNING 🌞 Tasks:</h2>
         {morningTasks}
-        <h2>Here are all your EVENING tasks:</h2>
+        <h2>EVENING 🌙 Tasks:</h2>
         {eveningTasks}
 
         <br></br>

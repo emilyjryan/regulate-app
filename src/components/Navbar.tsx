@@ -16,25 +16,29 @@ export default function Navbar () {
 
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
-      <a className="navbar-item">
-        <Link to="/tasks">Schedule</Link>
-      </a>
-      <a className="navbar-item">
-        <Link to="/emotions">Emotion Finder</Link>
-      </a>
-      <a className="navbar-item">
-        <Link to="/tasks/new">Create New Task</Link>
-      </a>
+        <div className="navbar-item">
+            <div className="buttons">
+                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item">
+                    <Link to="/tasks">Schedule</Link>
+                </div>
+                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item">
+                    <Link to="/emotions">Emotion Finder</Link>
+                </div>
+                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item">
+                    <Link to="/tasks/new">Create New Task</Link>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <a className="button is-primary">
-            <strong>Sign up</strong>
+          <a href="/signup" className="button is-primary">
+            <button>Sign up</button>
           </a>
-          <a className="button is-light">
-            Log in
+          <a href="/login" className="button is-light">
+            <button>Login</button>
           </a>
         </div>
       </div>

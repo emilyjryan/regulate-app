@@ -28,6 +28,7 @@ export default function NewTask() {
                 time: '',
                 details: ''
             })
+            navigate('/tasks')
         })
         .catch(err => console.log(err))   
         }
@@ -51,7 +52,7 @@ export default function NewTask() {
                 <br></br>
                 <br></br>
                 
-            <label htmlFor="task-time">What time of day do you do this? (select Morning or Evening)</label>
+            <label htmlFor="task-time">What time of day do you do this?</label>
             <select 
             className="task-input" 
             id="task-time"
