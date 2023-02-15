@@ -8,48 +8,23 @@ export default function Navbar () {
 
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-            <a className="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
-    </a>
-
-    <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+            <img src='https://cdn0.iconfinder.com/data/icons/education-631/66/45-512.png' alt="regulate-icon" width="56" height="28"/>
+            <a className="navbar-item" href="/">
+                <h2>Regulate</h2>
+            </a>
+        </div>
 
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
       <a className="navbar-item">
-        Home
+        <Link to="/tasks">Schedule</Link>
       </a>
-
       <a className="navbar-item">
-        Documentation
+        <Link to="/emotions">Emotion Finder</Link>
       </a>
-
-      <div className="navbar-item has-dropdown is-hoverable">
-        <a className="navbar-link">
-          More
-        </a>
-
-        <div className="navbar-dropdown">
-          <a className="navbar-item">
-            About
-          </a>
-          <a className="navbar-item">
-            Jobs
-          </a>
-          <a className="navbar-item">
-            Contact
-          </a>
-            <li className="navbar-divider"></li>
-          <a className="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      </div>
+      <a className="navbar-item">
+        <Link to="/tasks/new">Create New Task</Link>
+      </a>
     </div>
 
     <div className="navbar-end">
@@ -66,23 +41,6 @@ export default function Navbar () {
     </div>
   </div>
 </nav>
-
-        {/* <div>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/tasks">Schedule</Link>
-                </li>
-                <li>
-                    <Link to="/tasks/new">Create New Task</Link>
-                </li>
-                <li>
-                    <Link to="/emotions">Emotion Identifier</Link>
-                </li>
-            </ul>
-        </div> */}
         </>
     )
 }

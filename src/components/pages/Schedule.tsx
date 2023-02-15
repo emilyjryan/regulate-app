@@ -32,11 +32,18 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <br></br>
-            <ul key={task._id}>
-              <li>{task.title}</li>
-              <li>{task.details}</li>
-            </ul>
+            <div key={task._id} className="card">
+                <div className="card-content">
+                    <div className="media">
+                        <div className="media-content">
+                            <p className="title is-4">{task.title}</p>
+                        </div>
+                    </div>
+                    <div className="content">
+                        <p>{task.details}</p>
+                    </div>
+                </div>
+            </div>
             </>
         )
     }))
@@ -46,11 +53,18 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <br></br>
-            <ul key={task._id}>
-              <li>{task.title}</li>
-              <li>{task.details}</li>
-            </ul>
+            <div key={task._id} className="card">
+                <div className="card-content">
+                    <div className="media">
+                        <div className="media-content">
+                            <p className="title is-4">{task.title}</p>
+                        </div>
+                    </div>
+                    <div className="content">
+                        <p>{task.details}</p>
+                    </div>
+                </div>
+            </div>
             </>
         )
     }))
