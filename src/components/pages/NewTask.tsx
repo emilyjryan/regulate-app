@@ -35,11 +35,12 @@ export default function NewTask() {
 
     return (
         <>
-        <h2>New Task Form</h2>
-        <div>
+        <div className='card text-center mt-8 p-4' style={{width: '30rem', marginLeft: '25%', marginRight: '25%'}}>
+            <h1 className="mt-5 mb-5">Create a new task!</h1>
         <form className="task-form" onSubmit={handleSubmitForm}>
 
-            <label htmlFor="task-title">What task do you need to do?</label>
+            <label htmlFor="task-title">What task do you need to do? </label>
+            <br></br>
             <input 
                 id="task-title" 
                 type="text" 
@@ -52,7 +53,9 @@ export default function NewTask() {
                 <br></br>
                 <br></br>
                 
-            <label htmlFor="task-time">What time of day do you do this?</label>
+            <label htmlFor="task-time">What time of day do you do this? </label>
+            <br></br>
+            <div className='select is-primary'>
             <select 
             className="task-input" 
             id="task-time"
@@ -63,10 +66,12 @@ export default function NewTask() {
                 <option value="Morning">Morning</option>
                 <option value="Evening">Evening</option>
             </select>
+            </div>
             <br></br>
             <br></br>
 
-            <label htmlFor="task-details">Add any other details here:</label>
+            <label htmlFor="task-details">Add any other details here: </label>
+            <br></br>
             <input 
             id="task-details" 
             type="text" 
@@ -79,7 +84,7 @@ export default function NewTask() {
               <br></br>
               <br></br>
 
-            <button type="submit">Save Task</button>
+            <button className="button is-primary mt-4 mb-4" type="submit">Save Task</button>
         </form>
         </div>
         </>

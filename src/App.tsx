@@ -12,11 +12,12 @@ import Schedule from './components/pages/Schedule';
 function App() {
   return (
     <>
-    <div className="App">
+    <div className="App columns is-flex-direction-column" style={{height: '100vh'}}>
       <Router>
-      <header>
+      <header className="column is-narrow">
         <Navbar/>
       </header>
+      <main className="column">
       <Routes>
 
         <Route
@@ -40,7 +41,8 @@ function App() {
         />
         
       </Routes>
-      <footer>
+      </main>
+      <footer className='column is-narrow'>
         <Footer/>
       </footer>
       </Router>

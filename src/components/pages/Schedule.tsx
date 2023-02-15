@@ -58,7 +58,8 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <div key={task._id} className="card has-background-warning">
+            <br></br>
+            <div key={task._id} className="tbody card has-background-warning">
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -73,17 +74,18 @@ export default function Schedule () {
                             <div className="columns">
                             <button className="button is-rounded is-success column is-one-fourth" title="Disabled button" disabled>✅ Task Completed</button>
                             <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded is-info column is-one-fourth">Undo Complete </button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-fourth">❌ Delete Task</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-fourth">❌ Delete</button>
                             </div>
                             :
                             <div className="columns">
                             <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded is-success column is-two-thirds">Complete Task!</button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-third">❌ Delete Task</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-third">❌ Delete</button>
                             </div>
                                 }
                     </div>
                 </div>
             </div>
+            <br></br>
             </>
         )
     }))
@@ -93,7 +95,8 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <div key={task._id} className="card has-background-link">
+            <br></br>
+            <div key={task._id} className="tbody card has-background-link">
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -108,12 +111,12 @@ export default function Schedule () {
                             <div className="columns">
                             <button className="button is-rounded is-success column is-one-fourth" title="Disabled button" disabled>✅ Task Completed</button>
                             <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded is-info column is-one-fourth">Undo Complete </button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-fourth">❌ Delete Task</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-fourth">❌ Delete</button>
                             </div>
                             :
                             <div className="columns">
                             <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded is-success column is-two-thirds">Complete Task!</button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-third">❌ Delete Task</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-third">❌ Delete</button>
                             </div>
                                 }
                     </div>
@@ -131,12 +134,19 @@ export default function Schedule () {
     return (
         <>
         <h1>My Schedule</h1>
-        <h2>MORNING 🌞 Tasks:</h2>
-        {morningTasks}
-        <h2>EVENING 🌙 Tasks:</h2>
-        {eveningTasks}
-
-        <br></br>
+            <div className="table-container">
+                <h2>MORNING 🌞 Tasks:</h2>
+                <table className="table is-striped is-fullwidth ">
+                {morningTasks}
+                </table>
+            </div>
+            <div className="table-container">
+                <h2>EVENING 🌙 Tasks:</h2>
+                <table className="table is-striped is-fullwidth ">
+                {eveningTasks}
+                </table>
+            </div>
+        
         </>
     )
 }
