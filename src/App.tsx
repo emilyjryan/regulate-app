@@ -1,25 +1,51 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import logo from './logo.svg';
-import './App.css';
+import './index.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Emotions from './components/pages/Emotions';
 import NewTask from './components/pages/NewTask';
+import Home from './components/pages/Home';
+import Schedule from './components/pages/Schedule';
 
 function App() {
   return (
+    <>
     <div className="App">
       <Router>
       <header>
         <Navbar/>
       </header>
-      <h1>Regulate App</h1>
-      <NewTask/>
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Home/>}
+        />
+
+        <Route
+          path="/tasks"
+          element={<Schedule/>}
+        />
+
+        <Route
+          path="/tasks/new"
+          element={<NewTask/>}
+        />
+
+        <Route
+          path="/emotions"
+          element={<Emotions/>}
+        />
+        
+      </Routes>
       <footer>
         <Footer/>
       </footer>
       </Router>
     </div>
+    </>
   );
 }
 
