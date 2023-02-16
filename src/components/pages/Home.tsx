@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -27,6 +28,11 @@ export default function Home() {
 
                 <p>Remember that every child is unique, and what works for one child may not work for another. Be open to adjusting the schedule as needed, and seek the advice of a healthcare professional or therapist if you have any concerns.</p>
 					<br/>
+
+                <p className="text-center">Ready to get started?</p>
+                <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)', marginRight: '38%', marginLeft: '38%'}}>
+                    <Link to="/tasks">Start a Schedule!</Link>
+            </div>
 					<br/>
 			</div>
         </>

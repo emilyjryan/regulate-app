@@ -3,7 +3,7 @@ import React from "react";
 export default function Emotions() {
     return (
         <>
-            <h1>Emotions Route</h1>
+            <h1>Emotion Finder is coming soon!!</h1>
         </>
     )
 }
