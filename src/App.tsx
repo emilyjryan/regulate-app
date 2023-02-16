@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import logo from './logo.svg';
-import './index.css';
+import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Emotions from './components/pages/Emotions';

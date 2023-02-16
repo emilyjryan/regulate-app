@@ -18,17 +18,18 @@ export default function Schedule () {
         completed: Boolean
     }>
     >([])
+
+    const getAllTasks = async () => {
+        try {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks`)
+            const newTasks = await response.json()
+            setTasks(newTasks)
+        } catch (err) {
+            console.log('useEffect in Schedule.tsx', err)
+        }
+    }
    
     useEffect(() => {
-        const getAllTasks = async () => {
-            try {
-                const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks`)
-                const newTasks = await response.json()
-                setTasks(newTasks)
-            } catch (err) {
-                console.log('useEffect in Schedule.tsx', err)
-            }
-        }
         getAllTasks()
     }, [])
 
@@ -43,14 +44,14 @@ export default function Schedule () {
         await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks/complete/${taskId}`, {
             method: "PUT",
         })
-        navigate('/tasks')
+        getAllTasks()
     }
 
     async function handleUndoComplete(taskId: string) {
         await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks/undocomplete/${taskId}`, {
             method: "PUT",
         })
-        navigate('/tasks')
+        getAllTasks()
     }
 
 
@@ -59,7 +60,7 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <div key={task._id} className="tbody m-1" style={{backgroundColor: '#ffc857'}}>
+            <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -94,7 +95,7 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <div key={task._id} className="tbody m-1" style={{backgroundColor: '#648fce'}}>
+            <div key={task._id} className="tbody" style={{backgroundColor: '#648fce', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -132,18 +133,18 @@ export default function Schedule () {
     return (
         <>
         <h1 className="text-center" style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>My Schedule</h1>
-            <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)', marginRight: '38%', marginLeft: '38%'}}>
+            <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item mt-3 mb-3" style={{backgroundColor: 'rgb(255,78,135)', marginRight: '38%', marginLeft: '38%'}}>
                     <Link to="/tasks/new">Create A New Task!</Link>
             </div>
             <div className="table-container">
                 <h2 className="text-center" style={{fontSize: '32px'}}>MORNING 🌞 Tasks:</h2>
-                <table className="table is-striped is-fullwidth ">
+                <table className="table is-striped is-fullwidth" style={{backgroundColor: 'rgb(192,212,248)'}}>
                 {morningTasks}
                 </table>
             </div>
             <div className="table-container">
                 <h2 className="text-center" style={{fontSize: '32px'}}>EVENING 🌙 Tasks:</h2>
-                <table className="table is-striped is-fullwidth ">
+                <table className="table is-striped is-fullwidth" style={{backgroundColor: 'rgb(192,212,248)'}}>
                 {eveningTasks}
                 </table>
             </div>
