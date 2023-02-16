@@ -6,14 +6,14 @@ export default function NewTask() {
 
     type FormData = {
         title: string,
-        time: string,
-        details: string
+        timeOfDay: string,
+        specificTime: string
     }
 
     const [form, setForm] = useState<FormData>({
         title: '',
-        time: '',
-        details: ''
+        timeOfDay: '',
+        specificTime: ''
     });
 
     const navigate = useNavigate();
@@ -25,8 +25,8 @@ export default function NewTask() {
             console.log(res.data)
             setForm({
                 title: '',
-                time: '',
-                details: ''
+                timeOfDay: '',
+                specificTime: ''
             })
             navigate('/tasks')
         })
@@ -39,7 +39,7 @@ export default function NewTask() {
             <h1 className="mt-5 mb-5" style={{color: 'white', fontSize: '32px', backgroundColor: 'rgb(49,252,188)'}}>Create a new task!</h1>
         <form className="task-form" onSubmit={handleSubmitForm}>
 
-            <label htmlFor="task-title">What task do you need to do? </label>
+            <label htmlFor="task-title">What task do you need to do?</label>
             <br></br>
             <input
                 id="task-title" 
@@ -48,11 +48,26 @@ export default function NewTask() {
                 onChange={(e) => {
                     setForm({...form, title: e.target.value})
                 }}
-                className="textarea"
+                style={{width: '70%'}}
                 placeholder="I need to..." />
                 <br></br>
                 <br></br>
                 
+            <label htmlFor="task-time">At what time?</label>
+            <br></br>
+
+                <input 
+                type="time"
+                className="task-input" 
+                id="task-time"
+                onChange={(e) => {
+                    setForm({...form, specificTime: e.target.value})
+                }}>
+                </input>
+    
+            <br></br>
+            <br></br>
+
             <label htmlFor="task-time">What time of day do you do this? </label>
             <br></br>
             <div className='select is-primary'>
@@ -60,27 +75,14 @@ export default function NewTask() {
             className="task-input" 
             id="task-time"
             onChange={(e) => {
-                setForm({...form, time: e.target.value})
+                setForm({...form, timeOfDay: e.target.value})
             }}>
                 <option value="">Select One</option>
                 <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
                 <option value="Evening">Evening</option>
             </select>
             </div>
-            <br></br>
-            <br></br>
-
-            <label htmlFor="task-details">Add any other details here: </label>
-            <br></br>
-            <input 
-            id="task-details" 
-            type="text" 
-            value={form.details} 
-            onChange={(e) => {
-                setForm({...form, details: e.target.value})
-            }}
-            className="textarea" 
-            placeholder="Task details..." />
               <br></br>
               <br></br>
 

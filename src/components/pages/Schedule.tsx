@@ -13,8 +13,8 @@ export default function Schedule () {
     Array<{
         _id: string,
         title: string,
-        time: string,
-        details: string,
+        timeOfDay: string,
+        specificTime: string,
         completed: Boolean
     }>
     >([])
@@ -54,28 +54,28 @@ export default function Schedule () {
         getAllTasks()
     }
 
-
+    // MORNING TASK FILTER AND MAP //
     const morningTasks = tasks.filter((task) => {
-        return task.time === "Morning"
+        return task.timeOfDay === "Morning"
     }).map((task => {
         return (
             <>
             <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
                 <div className="card-content">
                     <div className="media">
-                        <div className="media-content">
-                            <p className="title is-4">{task.title}</p>
+                        <div className="columns media-content">
+                            <div className="column title is-4 is-one-quarter">{task.specificTime} {task.title}</div>
                         </div>
+                        <div></div>
+                       
                     </div>
-                    <div className="content">
-                        <p>{task.details}</p>
-                    </div>
+            
                     <div>
                         {task.completed? 
                             <div className="columns">
-                            <button className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}} title="Disabled button" disabled>✅ Task Completed</button>
-                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: 'rgb(35,203,255)'}}>Undo Complete </button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
+                            <button className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}} title="Disabled button" disabled>✅ Task Completed</button>
+                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: 'rgb(35,203,255)'}}>Undo Complete </button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                             :
                             <div className="columns">
@@ -90,27 +90,29 @@ export default function Schedule () {
         )
     }))
 
-    const eveningTasks = tasks.filter((task) => {
-        return task.time === "Evening"
+
+    // AFTERNOON TASK FILTER AND MAP //
+    const afternoonTasks = tasks.filter((task) => {
+        return task.timeOfDay === "Afternoon"
     }).map((task => {
         return (
             <>
-            <div key={task._id} className="tbody" style={{backgroundColor: '#648fce', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
+            <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
                 <div className="card-content">
                     <div className="media">
-                        <div className="media-content">
-                            <p className="title is-4">{task.title}</p>
+                        <div className="columns media-content">
+                            <div className="column title is-4 is-one-quarter">{task.specificTime} {task.title}</div>
                         </div>
+                        <div></div>
+                       
                     </div>
-                    <div className="content">
-                        <p>{task.details}</p>
-                    </div>
+            
                     <div>
                         {task.completed? 
                             <div className="columns">
-                            <button className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}} title="Disabled button" disabled>✅ Task Completed</button>
-                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: 'rgb(35,203,255)'}}>Undo Complete </button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
+                            <button className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}} title="Disabled button" disabled>✅ Task Completed</button>
+                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: 'rgb(35,203,255)'}}>Undo Complete </button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                             :
                             <div className="columns">
@@ -125,9 +127,41 @@ export default function Schedule () {
         )
     }))
 
-    // const miscTasks = tasks.filter((task) => {
-    //     return task.time === ""
-    // })
+    // EVENING TASK FILTER AND MAP //
+    const eveningTasks = tasks.filter((task) => {
+        return task.timeOfDay === "Evening"
+    }).map((task => {
+        return (
+            <>
+            <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
+                <div className="card-content">
+                    <div className="media">
+                        <div className="columns media-content">
+                            <div className="column title is-4 is-one-quarter">{task.specificTime} {task.title}</div>
+                        </div>
+                        <div></div>
+                       
+                    </div>
+            
+                    <div>
+                        {task.completed? 
+                            <div className="columns">
+                            <button className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}} title="Disabled button" disabled>✅ Task Completed</button>
+                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: 'rgb(35,203,255)'}}>Undo Complete </button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
+                            </div>
+                            :
+                            <div className="columns">
+                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
+                            </div>
+                                }
+                    </div>
+                </div>
+            </div>
+            </>
+        )
+    }))
     
 
     return (
@@ -140,6 +174,12 @@ export default function Schedule () {
                 <h2 className="text-center" style={{fontSize: '32px'}}>MORNING 🌞 Tasks:</h2>
                 <table className="table is-striped is-fullwidth" style={{backgroundColor: 'rgb(192,212,248)'}}>
                 {morningTasks}
+                </table>
+            </div>
+            <div className="table-container">
+                <h2 className="text-center" style={{fontSize: '32px'}}>AFTERNOON 🌈 Tasks:</h2>
+                <table className="table is-striped is-fullwidth" style={{backgroundColor: 'rgb(192,212,248)'}}>
+                {afternoonTasks}
                 </table>
             </div>
             <div className="table-container">
