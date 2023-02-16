@@ -12,9 +12,14 @@ export default function Navbar () {
             <a className="navbar-item" href="/">
                 <h2 style={{fontSize: '40px'}}>Regulate</h2>
             </a>
+            <div className="navbar-burger burger" data-target="options">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
         </div>
 
-  <div id="navbarBasicExample" className="navbar-menu">
+  <div id="options" className="navbar-menu">
     <div className="navbar-start">
         <div className="navbar-item">
             <div className="buttons">

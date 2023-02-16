@@ -63,10 +63,10 @@ export default function Schedule () {
             <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
                 <div className="card-content">
                     <div className="media">
-                        <div className="columns media-content">
-                            <div className="column title is-4 is-one-quarter">{task.specificTime} {task.title}</div>
+                        <div className="media-content">
+                            <div className="title is-4">{task.specificTime} {task.title}</div>
+                            <div></div>
                         </div>
-                        <div></div>
                        
                     </div>
             
@@ -100,10 +100,10 @@ export default function Schedule () {
             <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
                 <div className="card-content">
                     <div className="media">
-                        <div className="columns media-content">
-                            <div className="column title is-4 is-one-quarter">{task.specificTime} {task.title}</div>
+                        <div className="media-content">
+                            <div className="title is-4">{task.specificTime} {task.title}</div>
+                            <div></div>
                         </div>
-                        <div></div>
                        
                     </div>
             
@@ -136,10 +136,10 @@ export default function Schedule () {
             <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857', borderRadius: '10px', marginLeft: '5px', marginRight: '5px', marginBottom: '7px'}}>
                 <div className="card-content">
                     <div className="media">
-                        <div className="columns media-content">
-                            <div className="column title is-4 is-one-quarter">{task.specificTime} {task.title}</div>
+                        <div className="media-content">
+                            <div className="title is-4">{task.specificTime} {task.title}</div>
+                            <div></div>
                         </div>
-                        <div></div>
                        
                     </div>
             
@@ -166,7 +166,8 @@ export default function Schedule () {
 
     return (
         <>
-        <h1 className="text-center" style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>My Schedule</h1>
+        <div className="schedule-holder" style={{marginLeft: '10%', marginRight: '10%', marginTop: '3%', border: 'rgb(167,198,246) solid 5px'}}>
+        <h1 className="text-center" style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>🗓 My Schedule</h1>
             <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item mt-3 mb-3" style={{backgroundColor: 'rgb(255,78,135)', marginRight: '38%', marginLeft: '38%'}}>
                     <Link to="/tasks/new">Create A New Task!</Link>
             </div>
@@ -187,6 +188,7 @@ export default function Schedule () {
                 <table className="table is-striped is-fullwidth" style={{backgroundColor: 'rgb(192,212,248)'}}>
                 {eveningTasks}
                 </table>
+            </div>
             </div>
         
         </>

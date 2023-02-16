@@ -10,6 +10,9 @@ import Home from './components/pages/Home';
 import Schedule from './components/pages/Schedule';
 
 function App() {
+
+  // Day and time
+
   return (
     <>
     <div className="App columns is-flex-direction-column" style={{height: '100vh', backgroundColor: 'rgb(192,212,248)'}}>
@@ -18,6 +21,7 @@ function App() {
         <Navbar/>
       </header>
       <main className="column">
+      <h1>Date and Time</h1>
       <Routes>
 
         <Route
