@@ -121,16 +121,19 @@ export default function Emotions() {
 
             <div className="column text-center">
                 <div>
-                    <h1 style={{marginTop: '12px', fontSize: '26px', textAlign: 'center'}}>I am feeling...</h1>
+                    <h1 style={{marginTop: '12px', fontSize: '40px', textAlign: 'center'}}>I am feeling...</h1>
                 </div>
                 <div>
-                    <p style={{fontSize: '120px'}}>{emotionId.pic}</p>
-                    {emotionId.word}                
+                    <p style={{fontSize: '200px'}}>{emotionId.pic}</p>
+                    <h1 style={{fontSize: '80px', marginBottom: '10%'}}>{emotionId.word}</h1>         
                 </div>
-
-                <div className="column">
-                    CLEAR
-                </div>
+                { emotionId.pic == '' && emotionId.word == '' ?
+                <h1>Nothing selected yet!</h1>
+                :
+                <button onClick={() => selectEmotion("", "")} className="button column text-center m-auto" >
+                    <h1>CLEAR</h1>
+                </button>
+}
             </div>
 
         </div>
