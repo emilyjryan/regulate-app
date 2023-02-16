@@ -23,6 +23,7 @@ export default function Schedule () {
         try {
             const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks`)
             const newTasks = await response.json()
+            // newTasks.sort()
             setTasks(newTasks)
         } catch (err) {
             console.log('useEffect in Schedule.tsx', err)
