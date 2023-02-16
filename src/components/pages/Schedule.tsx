@@ -72,14 +72,14 @@ export default function Schedule () {
                     <div>
                         {task.completed? 
                             <div className="columns">
-                            <button className="button is-rounded is-success column is-one-fourth" title="Disabled button" disabled>✅ Task Completed</button>
-                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded is-info column is-one-fourth">Undo Complete </button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-fourth">❌ Delete</button>
+                            <button className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}} title="Disabled button" disabled>✅ Task Completed</button>
+                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: 'rgb(35,203,255)'}}>Undo Complete </button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                             :
                             <div className="columns">
-                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded is-success column is-two-thirds">Complete Task!</button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-third">❌ Delete</button>
+                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                                 }
                     </div>
@@ -94,7 +94,7 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <div key={task._id} className="tbody m-1" style={{backgroundColor: '#756cb5'}}>
+            <div key={task._id} className="tbody m-1" style={{backgroundColor: '#648fce'}}>
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -107,14 +107,14 @@ export default function Schedule () {
                     <div>
                         {task.completed? 
                             <div className="columns">
-                            <button className="button is-rounded is-success column is-one-fourth" title="Disabled button" disabled>✅ Task Completed</button>
-                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded is-info column is-one-fourth">Undo Complete </button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-fourth">❌ Delete</button>
+                            <button className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}} title="Disabled button" disabled>✅ Task Completed</button>
+                            <button onClick={() => handleUndoComplete(task._id)} className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: 'rgb(35,203,255)'}}>Undo Complete </button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-fourth" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                             :
                             <div className="columns">
-                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded is-success column is-two-thirds">Complete Task!</button>
-                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded is-danger column is-one-third">❌ Delete</button>
+                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
+                            <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                                 }
                     </div>
