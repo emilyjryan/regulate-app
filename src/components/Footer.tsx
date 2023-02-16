@@ -5,16 +5,17 @@ import '../App.css'
 export default function Footer() {
     return (
         <>
-            <footer className="footer" style={{backgroundColor: '#2b2d42'}}>
-                <div className="content has-text-centered">
-                    <div className="columns text-center" style={{paddingLeft: '18%', paddingRight: '18%'}}>
-                        <p className="column"><strong>Regulate</strong> by <a href="https://nextjs-portfolio-92yvlktgj-emilyjryan.vercel.app/">Emily Ryan</a></p>
-                        <br></br>
+            <footer className="footer" style={{backgroundColor: '#4f4789'}}>
+                <div className="content">
+                    <div className="columns text-center" style={{color: '#c0d4f8', paddingLeft: '18%', paddingRight: '18%'}}>
+                        <div className="column"><strong style={{fontSize: '28px'}}>Regulate</strong> <a href="https://nextjs-portfolio-92yvlktgj-emilyjryan.vercel.app/">by Emily Ryan</a></div>
+                  
                         <a className="column" href="https://www.linkedin.com/in/emilyjudithryan/">LinkedIn</a>
-                        <br></br>
+            
                         <a className="column" href="https://github.com/emilyjryan">GitHub</a>
-                        <br></br>
+                      
                         <a className="column" href="https://nextjs-portfolio-92yvlktgj-emilyjryan.vercel.app/">Portfolio</a>
+
                     </div>
                 </div>
             </footer>

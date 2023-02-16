@@ -3,6 +3,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Navigate, { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Schedule () {
 
@@ -131,6 +132,9 @@ export default function Schedule () {
     return (
         <>
         <h1 className="text-center" style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>My Schedule</h1>
+            <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)', marginRight: '38%', marginLeft: '38%'}}>
+                    <Link to="/tasks/new">Create A New Task!</Link>
+            </div>
             <div className="table-container">
                 <h2 className="text-center" style={{fontSize: '32px'}}>MORNING 🌞 Tasks:</h2>
                 <table className="table is-striped is-fullwidth ">
