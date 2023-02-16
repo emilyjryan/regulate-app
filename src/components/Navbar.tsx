@@ -18,13 +18,13 @@ export default function Navbar () {
     <div className="navbar-start">
         <div className="navbar-item">
             <div className="buttons">
-                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item">
+                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)'}}>
                     <Link to="/tasks">Schedule</Link>
                 </div>
-                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item">
+                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)'}}>
                     <Link to="/emotions">Emotion Finder</Link>
                 </div>
-                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item">
+                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)'}}>
                     <Link to="/tasks/new">Create New Task</Link>
                 </div>
             </div>

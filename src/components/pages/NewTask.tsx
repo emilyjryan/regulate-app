@@ -35,21 +35,21 @@ export default function NewTask() {
 
     return (
         <>
-        <div className='card text-center mt-8 p-4' style={{width: '30rem', marginLeft: '25%', marginRight: '25%'}}>
-            <h1 className="mt-5 mb-5">Create a new task!</h1>
+        <div className='card text-center mt-8 p-4' style={{marginLeft: '25%', marginRight: '25%', backgroundColor: 'rgb(254,196,68)'}}>
+            <h1 className="mt-5 mb-5" style={{color: 'white', fontSize: '32px', backgroundColor: 'rgb(49,252,188)'}}>Create a new task!</h1>
         <form className="task-form" onSubmit={handleSubmitForm}>
 
             <label htmlFor="task-title">What task do you need to do? </label>
             <br></br>
-            <input 
+            <input
                 id="task-title" 
                 type="text" 
                 value={form.title}
                 onChange={(e) => {
                     setForm({...form, title: e.target.value})
                 }}
-                className="task-input" 
-                placeholder="Task title..." />
+                className="textarea"
+                placeholder="I need to..." />
                 <br></br>
                 <br></br>
                 
@@ -79,12 +79,12 @@ export default function NewTask() {
             onChange={(e) => {
                 setForm({...form, details: e.target.value})
             }}
-            className="task-input" 
+            className="textarea" 
             placeholder="Task details..." />
               <br></br>
               <br></br>
 
-            <button className="button is-primary mt-4 mb-4" type="submit">Save Task</button>
+            <button className="button is-rounded mt-4 mb-4" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}} type="submit">Save Task</button>
         </form>
         </div>
         </>

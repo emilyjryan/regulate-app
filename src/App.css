@@ -1,3 +1,17 @@
+:root {
+  --lt-orange: rgb(254,196,68)
+  --dk-orange: rgb(248,175,34)
+  --lt-green: rgb(49,252,188)
+  --dk-green: rgb(27,230,173)
+  --lt-gray: rgb(192,212,248)
+  --dk-gray: rgb(167,198,246)
+  --teal: rgb(35,203,255)
+  --lt-pink: rgb(255,78,135)
+  --dk-pink: rgb(248,47,117)
+  --sunglow: #ffc857
+  --ultra-violet: #4f4789
+}
+
 .App {
   text-align: center;
 }

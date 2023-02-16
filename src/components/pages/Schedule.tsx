@@ -59,7 +59,7 @@ export default function Schedule () {
         return (
             <>
             <br></br>
-            <div key={task._id} className="tbody card has-background-warning">
+            <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857'}}>
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -96,7 +96,7 @@ export default function Schedule () {
         return (
             <>
             <br></br>
-            <div key={task._id} className="tbody card has-background-link">
+            <div key={task._id} className="tbody" style={{backgroundColor: '#756cb5'}}>
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -133,15 +133,15 @@ export default function Schedule () {
 
     return (
         <>
-        <h1>My Schedule</h1>
+        <h1 style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>My Schedule</h1>
             <div className="table-container">
-                <h2>MORNING 🌞 Tasks:</h2>
+                <h2 style={{fontSize: '32px'}}>MORNING 🌞 Tasks:</h2>
                 <table className="table is-striped is-fullwidth ">
                 {morningTasks}
                 </table>
             </div>
             <div className="table-container">
-                <h2>EVENING 🌙 Tasks:</h2>
+                <h2 style={{fontSize: '32px'}}>EVENING 🌙 Tasks:</h2>
                 <table className="table is-striped is-fullwidth ">
                 {eveningTasks}
                 </table>
