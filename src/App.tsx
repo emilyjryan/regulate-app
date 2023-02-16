@@ -11,7 +11,23 @@ import Schedule from './components/pages/Schedule';
 
 function App() {
 
-  // Day and time
+  const weekday = new Array(7);
+    weekday[0]='Sunday';
+    weekday[1]='Monday';
+    weekday[2]='Tuesday';
+    weekday[3]='Wednesday';
+    weekday[4]='Thursday';
+    weekday[5]='Friday';
+    weekday[6]='Saturday';
+
+  let monthOfYear = new Array(12);
+    monthOfYear = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+
+  const dayOfWeek = new Date().getDay()
+  const day = new Date().getDate()
+  const month = new Date().getMonth()
+  const year = new Date().getFullYear()
+
 
   return (
     <>
@@ -21,7 +37,10 @@ function App() {
         <Navbar/>
       </header>
       <main className="column">
-      <h1>Date and Time</h1>
+      <div className='date' style={{fontSize: '30px', marginLeft: '5%'}}>
+        <h1>Today is {weekday[dayOfWeek].toUpperCase()}</h1>
+        <h1>It's {monthOfYear[month]} {day}, {year}</h1>
+      </div>
       <Routes>
 
         <Route

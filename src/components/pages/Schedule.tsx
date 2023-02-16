@@ -40,7 +40,7 @@ export default function Schedule () {
         setTasks(tasks.filter((task) => task._id !== taskId))
     }
 
-    async function handleSubmitTask(taskId: string) {
+    async function handleCompleteTask(taskId: string) {
         await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks/complete/${taskId}`, {
             method: "PUT",
         })
@@ -79,7 +79,7 @@ export default function Schedule () {
                             </div>
                             :
                             <div className="columns">
-                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
+                            <button onClick={() => handleCompleteTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
                             <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                                 }
@@ -116,7 +116,7 @@ export default function Schedule () {
                             </div>
                             :
                             <div className="columns">
-                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
+                            <button onClick={() => handleCompleteTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
                             <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                                 }
@@ -152,7 +152,7 @@ export default function Schedule () {
                             </div>
                             :
                             <div className="columns">
-                            <button onClick={() => handleSubmitTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
+                            <button onClick={() => handleCompleteTask(task._id)} className="button is-rounded column is-two-thirds" style={{color: 'white', backgroundColor: 'rgb(49,252,188)'}}>Complete Task!</button>
                             <button onClick={() => handleDeleteTask(task._id)} className="button is-rounded column is-one-third" style={{color: 'white', backgroundColor: '#9a0a0a'}}>❌ Delete</button>
                             </div>
                                 }
@@ -163,7 +163,7 @@ export default function Schedule () {
         )
     }))
     
-
+    // SCHEDULE //
     return (
         <>
         <div className="schedule-holder" style={{marginLeft: '10%', marginRight: '10%', marginTop: '3%', border: 'rgb(167,198,246) solid 5px'}}>
