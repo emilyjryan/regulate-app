@@ -58,8 +58,7 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <br></br>
-            <div key={task._id} className="tbody" style={{backgroundColor: '#ffc857'}}>
+            <div key={task._id} className="tbody m-1" style={{backgroundColor: '#ffc857'}}>
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -85,7 +84,6 @@ export default function Schedule () {
                     </div>
                 </div>
             </div>
-            <br></br>
             </>
         )
     }))
@@ -95,8 +93,7 @@ export default function Schedule () {
     }).map((task => {
         return (
             <>
-            <br></br>
-            <div key={task._id} className="tbody" style={{backgroundColor: '#756cb5'}}>
+            <div key={task._id} className="tbody m-1" style={{backgroundColor: '#756cb5'}}>
                 <div className="card-content">
                     <div className="media">
                         <div className="media-content">
@@ -133,15 +130,15 @@ export default function Schedule () {
 
     return (
         <>
-        <h1 style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>My Schedule</h1>
+        <h1 className="text-center" style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>My Schedule</h1>
             <div className="table-container">
-                <h2 style={{fontSize: '32px'}}>MORNING 🌞 Tasks:</h2>
+                <h2 className="text-center" style={{fontSize: '32px'}}>MORNING 🌞 Tasks:</h2>
                 <table className="table is-striped is-fullwidth ">
                 {morningTasks}
                 </table>
             </div>
             <div className="table-container">
-                <h2 style={{fontSize: '32px'}}>EVENING 🌙 Tasks:</h2>
+                <h2 className="text-center" style={{fontSize: '32px'}}>EVENING 🌙 Tasks:</h2>
                 <table className="table is-striped is-fullwidth ">
                 {eveningTasks}
                 </table>

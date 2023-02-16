@@ -22,10 +22,10 @@ export default function Navbar () {
                     <Link to="/tasks">Schedule</Link>
                 </div>
                 <div className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)'}}>
-                    <Link to="/emotions">Emotion Finder</Link>
+                    <Link to="/tasks/new">Create New Task</Link>
                 </div>
                 <div className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)'}}>
-                    <Link to="/tasks/new">Create New Task</Link>
+                    <Link to="/emotions">Emotion Finder</Link>
                 </div>
             </div>
         </div>
