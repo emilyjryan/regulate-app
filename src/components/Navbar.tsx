@@ -6,7 +6,7 @@ export default function Navbar () {
         <>
 
 
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar" style={{backgroundColor: 'rgb(167,198,246)', border: '#4f4789 solid 5px'}} role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
             <img src='https://cdn0.iconfinder.com/data/icons/education-631/66/45-512.png' alt="regulate-icon" width="70" height="28"/>
             <a className="navbar-item" href="/">

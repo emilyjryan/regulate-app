@@ -31,12 +31,12 @@ function App() {
 
   return (
     <>
-    <div className="App columns is-flex-direction-column" style={{height: '100vh', backgroundColor: 'rgb(192,212,248)'}}>
+    <div className="App columns is-flex-direction-column" style={{height: '100vh'}}>
       <Router>
-      <header className="column is-narrow">
+      <header className="column is-narrow" style={{backgroundColor: 'rgb(192,212,248)'}}>
         <Navbar/>
       </header>
-      <main className="column">
+      <main className="column" style={{backgroundColor: 'rgb(192,212,248)'}}>
       <div className='date' style={{fontSize: '30px', marginLeft: '5%'}}>
         <h1>Today is {weekday[dayOfWeek].toUpperCase()}</h1>
         <h1>It's {monthOfYear[month]} {day}, {year}</h1>
@@ -65,7 +65,7 @@ function App() {
         
       </Routes>
       </main>
-      <footer className='column is-narrow'>
+      <footer>
         <Footer/>
       </footer>
       </Router>

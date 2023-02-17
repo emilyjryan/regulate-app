@@ -45,7 +45,7 @@ export default function NewTask() {
 
     return (
         <>
-        <div className='card text-center mt-8 p-4' style={{marginLeft: '12%', marginRight: '12%', backgroundColor: 'rgb(254,196,68)'}}>
+        <div className='card text-center mt-8 p-4' style={{marginLeft: '12%', marginRight: '12%', marginBottom: '10%', backgroundColor: 'rgb(254,196,68)'}}>
             <h1 className="mt-5 mb-5" style={{color: 'white', fontSize: '32px', backgroundColor: 'rgb(49,252,188)'}}>Create a new task!</h1>
         <form className="task-form" onSubmit={handleSubmitForm}>
 
