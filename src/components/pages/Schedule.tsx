@@ -166,7 +166,7 @@ export default function Schedule () {
     // SCHEDULE //
     return (
         <>
-        <div className="schedule-holder" style={{marginLeft: '10%', marginRight: '10%', marginTop: '3%', marginBottom: '3%', border: 'rgb(167,198,246) solid 5px'}}>
+        <div className="schedule-holder" style={{marginLeft: '10%', marginRight: '10%', marginBottom: '3%', border: 'rgb(167,198,246) solid 5px'}}>
         <h1 className="text-center" style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>🗓 My Schedule</h1>
             <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item mt-3 mb-3" style={{backgroundColor: 'rgb(255,78,135)', marginRight: '38%', marginLeft: '38%'}}>
                     <Link to="/tasks/new">Create A New Task!</Link>
@@ -174,19 +174,31 @@ export default function Schedule () {
             <div className="table-container">
                 <h2 className="text-center" style={{fontSize: '32px'}}>MORNING 🌞 Tasks:</h2>
                 <table className="table is-striped is-fullwidth" style={{backgroundColor: 'rgb(192,212,248)'}}>
-                {morningTasks}
+                {morningTasks.length < 1?
+                    <h2 style={{textAlign: 'center', fontSize: '20px'}}>No tasks yet!</h2>
+                    :
+                    <div>{morningTasks}</div>
+                }
                 </table>
             </div>
             <div className="table-container">
                 <h2 className="text-center" style={{fontSize: '32px'}}>AFTERNOON 🌈 Tasks:</h2>
                 <table className="table is-striped is-fullwidth" style={{backgroundColor: 'rgb(192,212,248)'}}>
-                {afternoonTasks}
+                {afternoonTasks.length < 1?
+                    <h2 style={{textAlign: 'center', fontSize: '20px'}}>No tasks yet!</h2>
+                    :
+                    <div>{afternoonTasks}</div>
+                }
                 </table>
             </div>
             <div className="table-container">
                 <h2 className="text-center" style={{fontSize: '32px'}}>EVENING 🌙 Tasks:</h2>
                 <table className="table is-striped is-fullwidth" style={{backgroundColor: 'rgb(192,212,248)'}}>
-                {eveningTasks}
+                {eveningTasks.length < 1?
+                    <h2 style={{textAlign: 'center', fontSize: '20px'}}>No tasks yet!</h2>
+                    :
+                    <div>{eveningTasks}</div>
+                }
                 </table>
             </div>
             </div>

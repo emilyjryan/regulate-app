@@ -12,29 +12,24 @@ export default function Navbar () {
             <a className="navbar-item" href="/">
                 <h2 style={{fontSize: '40px'}}>Regulate</h2>
             </a>
-            <div className="navbar-burger burger" data-target="options">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
         </div>
 
-  <div id="options" className="navbar-menu">
-    <div className="navbar-start">
-        <div className="navbar-item">
-            <div className="buttons">
-                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)'}}>
-                    <Link to="/tasks">My Schedule</Link>
-                </div>
-                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)'}}>
-                    <Link to="/tasks/new">Create A New Task</Link>
-                </div>
-                <div className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)'}}>
-                    <Link to="/emotions">Emotion Finder</Link>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div id="options" className="navbar-menu">
+          <div className="navbar-start">
+              <div className="navbar-item">
+                  <ul className="buttons menu">
+                      <li className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)', overflow: 'hidden'}}>
+                          <Link to="/tasks">My Schedule</Link>
+                      </li>
+                      <li className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)', overflow: 'hidden'}}>
+                          <Link to="/tasks/new">Create A New Task</Link>
+                      </li>
+                      <li className="button is-responsive is-outlined is-rounded is hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)', overflow: 'hidden'}}>
+                          <Link to="/emotions">Emotion Finder</Link>
+                      </li>
+                  </ul>
+              </div>
+          </div>
 
     <div className="navbar-end">
       <div className="navbar-item">
