@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
     return (
         <>
-            <div className='card m-4 p-6' style={{backgroundColor: 'rgb(167,198,246)'}}>
+            <div className='card mr-10 ml-10 mt-4 mb-4 pl-6 pr-6' style={{backgroundColor: 'rgb(167,198,246)'}}>
 				<h1 className="text-center p-3">Welcome to <span style={{fontSize: '40px'}}>Regulate!</span></h1>
 				<p>
                 Whether you're a parent, caregiver, or friend of a child with autism, it's important to know how best to care for them. A schedule can be an incredibly helpful and grounding tool for a child with autism, as it provides structure and predictability, which can reduce anxiety and help them feel more comfortable and in control.</p>
@@ -30,7 +30,7 @@ export default function Home() {
 					<br/>
 
                 <p className="text-center">Ready to get started?</p>
-                <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)', marginRight: '38%', marginLeft: '38%'}}>
+                <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item" style={{backgroundColor: 'rgb(255,78,135)', marginTop: '10px', marginRight: '38%', marginLeft: '38%'}}>
                     <Link to="/tasks">Start a Schedule!</Link>
             </div>
 					<br/>
