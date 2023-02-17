@@ -17,14 +17,14 @@ Coming soon:
 
 ## App Interface
 
-Homepage:
+<!-- Homepage:
 ![Homepage](./pics/homepage.png)
 Create A Task:
 ![Create Task](./pics/create-task.png)
 Schedule:
 ![Schedule](./pics/schedule.png)
 Emotion Finder:
-![Emotion Finder](./pics/emotions.png)
+![Emotion Finder](./pics/emotions.png) -->
 
 ## Initial Wireframes of the app
 
@@ -118,3 +118,15 @@ My biggest hurdles were the chronological ordering of tasks; learning how to ren
 ## Post Project Reflection:
 
 Overall, I thoroughly enjoyed working on this project. I learned so much about the debugging process, especially when it comes to working with brand new frameworks and technologies. Though I do enjoy group work, I actually think I learned more working on my own because it forced me to learn and understand the innerworkings of EACH route, each file, each page, so that I could work on the functionality. Productive coding really does require perseverance, patience, and creative problem-solving. 
+
+## Future Plans
+
+* More components, better organization
+* User auth functionality
+* CSS styling
+* Edit task feature
+* Chat feature for users to message with each other
+* Different style themes based on age of user
+* Calm environment creator
+* Task color change on complete action
+* Add external resource links
