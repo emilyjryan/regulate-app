@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { arrayBuffer } from "stream/consumers";
 
 export default function Emotions() {
 
@@ -128,7 +127,7 @@ export default function Emotions() {
                     <p style={{fontSize: '200px'}}>{emotionId.pic}</p>
                     <h1 style={{fontSize: '80px', marginBottom: '10%'}}>{emotionId.word}</h1>         
                 </div>
-                { emotionId.pic == '' && emotionId.word == '' ?
+                { emotionId.pic === '' && emotionId.word === '' ?
                 <h1>Nothing selected yet!</h1>
                 :
                 <button onClick={() => selectEmotion("", "")} className="button column text-center m-auto" >

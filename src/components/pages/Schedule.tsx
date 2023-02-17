@@ -1,13 +1,9 @@
 // Add to do list components
 
 import React, {useEffect, useState} from "react";
-import axios from "axios";
-import Navigate, { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function Schedule () {
-
-    const navigate = useNavigate()
 
     const [tasks, setTasks] = useState<
     Array<{
@@ -24,8 +20,9 @@ export default function Schedule () {
         try {
             const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks`)
             const newTasks = await response.json()
-            console.log(newTasks)
-            // newTasks.sort({minutes})
+
+            newTasks.sort((a: { minutes: number; }, b: { minutes: number; }) => a.minutes < b.minutes ? -1 : a.minutes > b.minutes ? 1 : 0)
+
             setTasks(newTasks)
         } catch (err) {
             console.log('useEffect in Schedule.tsx', err)

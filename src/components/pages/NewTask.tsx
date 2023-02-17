@@ -71,8 +71,8 @@ export default function NewTask() {
                 className="task-input" 
                 id="task-time"
                 onChange={(e) => {
-                    // const convertedMinutes = convertFxn(e.target.value)
-                   // setForm({...form, specificTime: e.target.value, minutes: convertedMinutes})
+                    const convertedMinutes = convertFxn(e.target.value)
+                   setForm({...form, specificTime: e.target.value, minutes: convertedMinutes})
                 }}>
                 </input>
     
