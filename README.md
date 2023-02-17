@@ -17,14 +17,14 @@ Coming soon:
 
 ## App Interface
 
-<!-- Homepage:
+Homepage:
 ![Homepage](./pics/homepage.png)
 Create A Task:
 ![Create Task](./pics/create-task.png)
 Schedule:
 ![Schedule](./pics/schedule.png)
 Emotion Finder:
-![Emotion Finder](./pics/emotions.png) -->
+![Emotion Finder](./pics/emotions.png)
 
 ## Initial Wireframes of the app
 
