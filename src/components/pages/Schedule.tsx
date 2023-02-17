@@ -15,6 +15,7 @@ export default function Schedule () {
         title: string,
         timeOfDay: string,
         specificTime: string,
+        minutes: number,
         completed: Boolean
     }>
     >([])
@@ -23,7 +24,8 @@ export default function Schedule () {
         try {
             const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/tasks`)
             const newTasks = await response.json()
-            // newTasks.sort()
+            console.log(newTasks)
+            // newTasks.sort({minutes})
             setTasks(newTasks)
         } catch (err) {
             console.log('useEffect in Schedule.tsx', err)
@@ -167,7 +169,7 @@ export default function Schedule () {
     // SCHEDULE //
     return (
         <>
-        <div className="schedule-holder" style={{marginLeft: '10%', marginRight: '10%', marginTop: '3%', border: 'rgb(167,198,246) solid 5px'}}>
+        <div className="schedule-holder" style={{marginLeft: '10%', marginRight: '10%', marginTop: '3%', marginBottom: '3%', border: 'rgb(167,198,246) solid 5px'}}>
         <h1 className="text-center" style={{fontSize: '40px', backgroundColor: 'rgb(167,198,246)'}}>🗓 My Schedule</h1>
             <div className="button is-responsive is-outlined is-rounded is-hovered navbar-item mt-3 mb-3" style={{backgroundColor: 'rgb(255,78,135)', marginRight: '38%', marginLeft: '38%'}}>
                     <Link to="/tasks/new">Create A New Task!</Link>

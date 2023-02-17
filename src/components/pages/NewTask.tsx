@@ -7,16 +7,25 @@ export default function NewTask() {
     type FormData = {
         title: string,
         timeOfDay: string,
-        specificTime: string
+        specificTime: string,
+        minutes: number
     }
 
     const [form, setForm] = useState<FormData>({
         title: '',
         timeOfDay: '',
-        specificTime: ''
+        specificTime: '',
+        minutes: 0,
     });
 
     const navigate = useNavigate();
+
+    // Converting time string to one number:
+    const convertFxn = (specificTimeInput: String) => {
+        const arrayOfBothNumbers = specificTimeInput.split(":", 2)
+        const totalMinutes = (Number(arrayOfBothNumbers[0]) * 60) + Number(arrayOfBothNumbers[1])
+        return totalMinutes
+    }
 
     function handleSubmitForm(e: React.FormEvent) {
         e.preventDefault();
@@ -26,7 +35,8 @@ export default function NewTask() {
             setForm({
                 title: '',
                 timeOfDay: '',
-                specificTime: ''
+                specificTime: '',
+                minutes: 0
             })
             navigate('/tasks')
         })
@@ -61,7 +71,8 @@ export default function NewTask() {
                 className="task-input" 
                 id="task-time"
                 onChange={(e) => {
-                    setForm({...form, specificTime: e.target.value})
+                    // const convertedMinutes = convertFxn(e.target.value)
+                   // setForm({...form, specificTime: e.target.value, minutes: convertedMinutes})
                 }}>
                 </input>
     

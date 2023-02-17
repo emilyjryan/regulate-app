@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { arrayBuffer } from "stream/consumers";
 
 export default function Emotions() {
 
@@ -12,7 +13,7 @@ export default function Emotions() {
         pic: emotionPic, 
         word: emotionWord,
     })
-    }
+    }   
 
     return (
         <>
