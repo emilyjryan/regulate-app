@@ -1,5 +1,8 @@
 # Welcome to the *Regulate* App!
 
+[Live Deployment](https://main--unique-lollipop-eb6497.netlify.app/)
+
+
 ## Description
 
 Maintaining a consistent, daily routine is vital in making a child with special needs such as autism feel safe, supported, and regulated. This is an app designed for these children to help them keep track of their daily tasks, which will help them develop good habits that promote independence. 
